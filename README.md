@@ -20,8 +20,8 @@ composer require jenssegers/agent
 <a href="https://getcomposer.org/">composer</a></i>
 <br>
 <br>
-Now, go to ''' app/http/Middleware ''' and paste the <b>AgentMiddleware.php</b><br>
-Then, go to ''' app/http/Kernel.php ''' and search for the 
+Now, go to ' app/http/Middleware ' and paste the <b>AgentMiddleware.php</b><br>
+Then, go to ' app/http/Kernel.php ' and search for the 
 '''php protected $middleware = [] ''' in the Kernel class, and add to the $middleware
 the following line:
 '''
@@ -29,17 +29,17 @@ the following line:
 '''
 <br>
 <br>
-### How to use it
+## How to use it
 You should use the middleware at some "RouteController". The AgentMiddleware is 
 called at all URL requisitions. So, you already have the '''php DEVICE_TYPE ''' 
 defined.<br>
 For example, if you want to return the view "home", your '''return view()''' will
 be ''' return view(DEVICE_TYPE . "home") '''.<br>
-#### Other uses
+## Other uses
 Now that you have all of this structure created, you can use any logical knowledge to
 define your own conditional, paths and constants. All of the Agent's methods still
 available to be use at the <b>AgentMiddleware</b>.
 <br>
 <br>
-#### You can call me for any doubts 
+## You can call me for any doubts 
 
