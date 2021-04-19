@@ -10,36 +10,35 @@ Before installing something, make sure that your views are divided in:<br>
     <li>views/desktop/</li>
     <li>views/mobile/</li>
 </ul>
+
 Because when the device were a mobile, a constant called <b>DEVICE_TYPE</b> will save
 "desktop/" or "mobile/". Then, this path will be used at your route controller.
 Run the following line code at the terminal:
 
-'''bash
+```bash
 composer require jenssegers/agent
-'''
+```
 
 <i>It will install the Agent library at the project. You must had installed the 
 <a href="https://getcomposer.org/">composer</a></i>
 <br>
 <br>
-Now, go to ' app/http/Middleware ' and paste the <b>AgentMiddleware.php</b><br>
-Then, go to ' app/http/Kernel.php ' and search for the 
-'''php protected $middleware = [] ''' in the Kernel class, and add to the $middleware
+
+Now, go to ```app/http/Middleware``` and paste the <b>AgentMiddleware.php</b><br>
+Then, go to ``` app/http/Kernel.php ``` and search for the 
+```php protected $middleware = [] ``` in the Kernel class, and add to the $middleware
 the following line:
 
-'''
+```
 \App\Http\Middleware\AgentMiddleware::class,
-'''
-
-<br>
-<br>
+```
 
 ## How to use it
 You should use the middleware at some "RouteController". The AgentMiddleware is 
-called at all URL requisitions. So, you already have the '''php DEVICE_TYPE ''' 
+called at all URL requisitions. So, you already have the ```php DEVICE_TYPE ``` 
 defined.<br>
-For example, if you want to return the view "home", your '''return view()''' will
-be ' return view(DEVICE_TYPE . "home") '.<br>
+For example, if you want to return the view "home", your ```return view()``` will
+be ``` return view(DEVICE_TYPE . "home") ```.<br>
 
 ## Other uses
 Now that you have all of this structure created, you can use any logical knowledge to
