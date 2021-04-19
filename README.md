@@ -40,12 +40,12 @@ defined.<br>
 For example, if you want to return the view "home", your ```return view()``` will
 be ``` return view(DEVICE_TYPE . "home") ```.<br>
 
-## :books: Other uses
+## :pencil2: Other uses
 Now that you have all of this structure created, you can use any logical knowledge to
 define your own conditional, paths and constants. All of the Agent's methods still
 available to be use at the <b>AgentMiddleware</b>.
 <br>
 <br>
 
-## :pencil2: You can call me for any doubts 
+## :space_invader: You can call me for any doubts 
 
